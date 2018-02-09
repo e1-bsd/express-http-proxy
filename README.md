@@ -452,6 +452,10 @@ The library will automatically use https if the provided path has 'https://' or 
 
 You can use ```proxyReqOptDecorator``` to ammend any auth or challenge headers required to succeed https.
 
+### Q: Does it work behind a corporate firewall?
+
+The library will respect `http_proxy` or `HTTP_PROXY` and `no_proxy` environment variables if set and route outside requests through configured corporate firewall proxy.
+
 ### Q: How can I support non-standard certificate chains?
 
 You can use the ability to decorate the proxy request prior to sending.    See ```proxyReqOptDecorator``` for more details.
